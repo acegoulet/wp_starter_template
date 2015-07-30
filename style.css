@@ -1,0 +1,112 @@
+/*
+Theme Name: SMF Wordpress Starter Theme
+Theme URI: http://sanbornmediafactory.com/
+Author: Adrien Goulet
+Author URI: http://acegoulet.com/
+Description: SASS-based Responsive wordpress starter theme
+Version: 1.0
+*/
+/* Base and Resets
+---------------------------------------------------------------------------------------------------- */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+audio:not([controls]) { display: none; }
+
+[hidden] { display: none; }
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-size: 1em; -webkit-font-smoothing: antialiased; }
+
+img, object, embed, table, iframe { max-width: 100%; }
+
+img { height: auto; }
+
+img, a img { border: 0; }
+
+body, html { margin: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Grid Classes
+---------------------------------------------------------------------------------------------------- */
+.container { width: 1024px; overflow: hidden; margin: 0 auto; max-width: 100%; }
+@media (max-width: 1024px) { .container { width: 96%; } }
+
+.lt-ie9 .container { max-width: 1024px; }
+
+.grid_1 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 4.25%; }
+@media (max-width: 767px) { .grid_1 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.grid_2 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 10.5%; }
+@media (max-width: 767px) { .grid_2 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.grid_3 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 16.75%; }
+@media (max-width: 767px) { .grid_3 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.grid_4 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 23%; }
+@media (max-width: 767px) { .grid_4 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.grid_5 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 29.25%; }
+@media (max-width: 767px) { .grid_5 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.grid_6 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 35.5%; }
+@media (max-width: 767px) { .grid_6 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.grid_7 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 41.75%; }
+@media (max-width: 767px) { .grid_7 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.grid_8 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 48%; }
+@media (max-width: 767px) { .grid_8 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.grid_9 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 54.25%; }
+@media (max-width: 767px) { .grid_9 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.grid_10 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 60.5%; }
+@media (max-width: 767px) { .grid_10 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.grid_11 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 66.75%; }
+@media (max-width: 767px) { .grid_11 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.grid_12 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 73%; }
+@media (max-width: 767px) { .grid_12 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.grid_13 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 79.25%; }
+@media (max-width: 767px) { .grid_13 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.grid_14 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 85.5%; }
+@media (max-width: 767px) { .grid_14 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.grid_15 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 91.75%; }
+@media (max-width: 767px) { .grid_15 { float: none; width: auto; display: block; margin-bottom: 1em; } }
+
+.alpha { margin-left: 0; }
+
+.omega { margin-right: 0; }
+
+.clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+
+/* Fonts
+----------------------------------------------------------------------------------------------------*/
+/* Sizes
+----------------------------------------------------------------------------------------------------*/
+/* Colors
+----------------------------------------------------------------------------------------------------*/
+/* Styles
+----------------------------------------------------------------------------------------------------*/
+/* Body
+----------------------------------------------------------------------------------------------------*/
+/* Header
+----------------------------------------------------------------------------------------------------*/
+/* Nav
+----------------------------------------------------------------------------------------------------*/
+/* Footer
+----------------------------------------------------------------------------------------------------*/
+/* Wordpress Content Styles
+---------------------------------------------------------------------------------------------------- */
+.entry-content .alignleft { float: left; display: inline; margin-right: 0.75em; }
+.entry-content .alignright { float: right; display: inline; margin-left: 0.75em; }
+.entry-content .aligncenter { display: block; margin: 0 auto; }
+.entry-content blockquote { padding: 0 1.5em; margin: 1.5em 0; }
+.entry-content blockquote p { margin-bottom: 0.818em; }
+.entry-content code { font-family: consolas, 'andale mono', 'courier new', monospace; font-size: 1em; }

@@ -1,0 +1,36 @@
+/* Wordpress Content Styles
+---------------------------------------------------------------------------------------------------- */
+
+.entry-content {
+
+    .alignleft {
+    	float: left;
+    	display: inline;
+    	margin-right: 0.75em;
+    }
+    
+    .alignright {
+    	float: right;
+    	display: inline;
+    	margin-left: 0.75em;
+    }
+    
+    .aligncenter {
+    	display: block;
+    	margin: 0 auto;
+    }
+    
+    blockquote {
+    	padding: 0 1.5em;
+    	margin: 1.5em 0;
+    }
+    
+    blockquote p {
+    	margin-bottom: 0.818em;
+    }
+    
+    code {
+    	font-family: consolas, 'andale mono', 'courier new', monospace;
+    	font-size: 1em;
+    }
+}

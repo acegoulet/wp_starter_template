@@ -1,0 +1,27 @@
+// Font sizes
+
+$font-size-small: 10px;
+$font-size-regular: 12px;
+$font-size-medium: 18px;
+$font-size-large: 20px;
+$font-size-extra-large: 25px;
+
+// Line Heights
+
+$line-height-p: 35px;
+
+// Breakpoints
+$tablet-landscape-point: "(max-width: 1024px)";
+$tablet-portrait-point: "(max-width: 1023px)";
+$mobile-landscape-wide-point: "(max-width: 767px)";
+$mobile-landscape-narrow-point: "(max-width: 567px)";
+$mobile-portrait-point: "(max-width: 479px)";
+
+// Layout
+$layout-max-width: 1024px;
+$layout-number-of-columns: 16;
+$layout-column-margin: 0.01;
+
+// Colors
+$color-black: #000;
+$color-white: #fff;

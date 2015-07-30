@@ -1,0 +1,53 @@
+/* Base and Resets
+---------------------------------------------------------------------------------------------------- */
+
+article, 
+aside, 
+details, 
+figcaption, 
+figure, 
+footer, 
+header, 
+hgroup, 
+nav, 
+section {
+	display: block;
+}
+audio, 
+canvas, 
+video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+audio:not([controls]) {
+	display: none;
+}
+[hidden] {
+	display: none;
+}
+
+html { 
+	font-size: 100%; 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%; 
+	font-size: 1em;
+	-webkit-font-smoothing: antialiased;
+}
+img, object, embed, table, iframe {
+	max-width: 100%;
+}
+img {
+	height: auto;
+}
+img, a img {
+	border: 0;
+}
+body, html {
+	margin: 0;
+}
+* { 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+}
