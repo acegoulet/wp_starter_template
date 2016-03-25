@@ -33,8 +33,6 @@ body, html { margin: 0; }
 .container { width: 1024px; overflow: hidden; margin: 0 auto; max-width: 100%; }
 @media (max-width: 1024px) { .container { width: 96%; } }
 
-.lt-ie9 .container { max-width: 1024px; }
-
 .grid_1 { float: left; display: inline; margin-left: 1%; margin-right: 1%; position: relative; width: 4.25%; }
 @media (max-width: 767px) { .grid_1 { float: none; width: auto; display: block; margin-bottom: 1em; } }
 
