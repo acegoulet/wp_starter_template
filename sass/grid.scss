@@ -67,10 +67,6 @@
 	@include ab-grid-wrap();
 }
 
-.lt-ie9 .container {
-	max-width: $layout-max-width;
-}
-
 @for $i from 1 to $layout-number-of-columns {
     .grid_#{$i} {
         @include ab-grid($i);
