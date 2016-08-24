@@ -1,5 +1,3 @@
-<?php // my_force_login(); /* Uncomment to enable the force login function */ ?>
-
 <!DOCTYPE html>
 <html lang="en" class="gt-ie9" xmlns="http://www.w3.org/1999/xhtml">
 

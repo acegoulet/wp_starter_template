@@ -4,12 +4,13 @@
 Force Login
 --------------------------------------------- */
 
-function my_force_login() {
+function aceify_force_login() {
 	global $post;
 	if ( ( is_single() || is_front_page() || is_page() ) && !is_page('login') && !is_user_logged_in()){
 		auth_redirect();
 	}  
 }
+//add_action( 'wp_head', 'aceify_force_login' ); //uncomment to force users to login
 
 /* ---------------------------------------------
 shorter stylesheet directory function & get template directory function
