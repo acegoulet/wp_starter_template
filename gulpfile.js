@@ -5,26 +5,31 @@ var source = require('vinyl-source-stream');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var buffer = require('vinyl-buffer');
+var order = require("gulp-order");
+var concat = require("gulp-concat");
 
-var MAIN_JS_FILE = './js/main.js';
+/* EXAMPLE with dependencies:
+var js_files = [
+    './js/vendor/validate.js',
+    './js/site-scripts/site-scripts.js'
+];
+*/
 
-gulp.task('scripts', function(){
-    var b = browserify();
-    b.add(MAIN_JS_FILE);
-    return b.bundle()
-        .pipe(source('scripts.concat.js'))
-        .pipe(rename('js/script.js'))
-        .pipe(gulp.dest('./'))
+var js_files = [
+    './js/site-scripts/site-scripts.js'
+];
+
+gulp.task('scriptsmin', function() {
+    gulp.src(js_files)
+    .pipe(concat('script-min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./js'));
 });
 
-gulp.task('scriptsmin', function(){
-    return browserify(MAIN_JS_FILE)
-        .bundle()
-        .pipe(source('scripts.concatmin.js'))
-        .pipe(buffer())
-        .pipe(uglify())
-        .pipe(rename('js/script-min.js'))
-        .pipe(gulp.dest('./'));
+gulp.task('scripts', function() {
+    gulp.src(js_files)
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest('./js'));
 });
 
 gulp.task('sass', function(){
