@@ -40,7 +40,8 @@ function theme_scripts_enqueue() {
     global $site_env;
     if($site_env == 'staging'){
         wp_enqueue_script('jquery');
-        wp_enqueue_script('theme-scripts', gtdu(). '/js/script.js', 'jquery', '1', true);
+        wp_enqueue_script('waypoints', gtdu(). '/js/vendor/jquery.validate.min.js', 'jquery', '1', true);
+        wp_enqueue_script('theme-scripts', gtdu(). '/js/site-scripts/site-scripts.js', array('jquery','validate'), '1', true);
     }
     else {
         wp_enqueue_script('jquery');

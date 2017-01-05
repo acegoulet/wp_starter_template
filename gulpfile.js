@@ -26,12 +26,6 @@ gulp.task('scriptsmin', function() {
     .pipe(gulp.dest('./js'));
 });
 
-gulp.task('scripts', function() {
-    gulp.src(js_files)
-    .pipe(concat('script.js'))
-    .pipe(gulp.dest('./js'));
-});
-
 gulp.task('sass', function(){
   gulp.src('./sass/style.scss')
     .pipe(sass())
@@ -39,7 +33,7 @@ gulp.task('sass', function(){
 })
 
 gulp.task('default', function() {
-    gulp.start(['scripts', 'scriptsmin', 'sass']);
-    gulp.watch(['./js/**/*.js'], ['scripts', 'scriptsmin']);
+    gulp.start(['scriptsmin', 'sass']);
+    gulp.watch(['./js/**/*.js'], ['scriptsmin']);
     gulp.watch(['./sass/**/*.scss', './sass/**/*.css'], ['sass']);
 });
