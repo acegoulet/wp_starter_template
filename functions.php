@@ -8,7 +8,7 @@ require(get_template_directory().'/inc/acf.php');
 require(get_template_directory().'/inc/misc_functions.php');
 require(get_template_directory().'/inc/images.php');
 require(get_template_directory().'/inc/menus.php');
-require(get_template_directory().'/inc/widgets.php');
+//require(get_template_directory().'/inc/widgets.php');
 
 // Admin Requirements
 if(is_admin()){
