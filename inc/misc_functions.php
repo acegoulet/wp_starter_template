@@ -188,11 +188,11 @@ Page Slug Body Class
 --------------------------------------------- */
 
 function add_slug_body_class( $classes ) {
-global $post;
-if ( isset( $post ) ) {
-$classes[] = $post->post_type . '-' . $post->post_name;
-}
-return $classes;
+    global $post;
+    if ( isset( $post ) ) {
+        $classes[] = $post->post_type . '-' . $post->post_name;
+    }
+    return $classes;
 }
 add_filter( 'body_class', 'add_slug_body_class' );
 
@@ -204,7 +204,6 @@ IF USING THE ACIFY PLUGIN, REMOVE THE FOLLOWING FUNCTIONS
 
 //remove admin areas
 function remove_menus(){
-    global $keystone_app;
 //	remove_menu_page( 'index.php' ); //Hide Dashboard
 //	remove_menu_page( 'edit.php' ); //Hide Posts
 	remove_menu_page( 'link-manager.php' ); //Hide Link Manager
