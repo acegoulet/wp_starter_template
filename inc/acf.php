@@ -1,8 +1,7 @@
 <?php
 
-global $dev_env;
 //remove ACF interfaces in WP Admin
-if($dev_env == false) {
+if(get_site_env() == 'production') {
     define( 'ACF_LITE', true );
 }
 

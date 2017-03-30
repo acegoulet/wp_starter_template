@@ -3,10 +3,6 @@
     overflow: hidden;
     margin: 0 auto;
     max-width: 100%;
-    
-    @media #{$tablet-landscape-point} {
-        width: 96%;
-    }
 }
 
 @mixin ab-grid($columns){
@@ -29,7 +25,44 @@
         float: none;
         width: auto;
         display: block;
-        margin-bottom: 1em;
+    }
+}
+
+@mixin ab-grid_alpha($columns){
+    margin-left: 0;
+    margin-right: $layout-column-margin * 100%;
+    $column_percentage: ($layout-column-margin * 2) * 100%;
+    
+    width: (($columns / $layout-number-of-columns - (1 * $layout-column-margin)) * 100%);
+    
+    @media #{$mobile-landscape-wide-point} {
+        width: auto;
+        margin: 0;
+    }
+}
+
+@mixin ab-grid_omega($columns){
+    margin-left: $layout-column-margin * 100%;
+    margin-right: 0;
+    $column_percentage: ($layout-column-margin * 2) * 100%;
+    
+    width: (($columns / $layout-number-of-columns - (1 * $layout-column-margin)) * 100%);
+    
+    @media #{$mobile-landscape-wide-point} {
+        width: auto;
+        margin: 0;
+    }
+}
+
+@mixin ab-grid_alpha_omega($columns){
+    margin-left: 0;
+    margin-right: 0;
+    $column_percentage: ($layout-column-margin * 2) * 100%;
+    
+    width: (($columns / $layout-number-of-columns - (0 * $layout-column-margin)) * 100%);
+    
+    @media #{$mobile-landscape-wide-point} {
+        width: auto;
     }
 }
 
@@ -67,18 +100,51 @@
 	@include ab-grid-wrap();
 }
 
-@for $i from 1 to $layout-number-of-columns {
+@for $i from 1 to $layout-number-of-columns+1 {
     .grid_#{$i} {
         @include ab-grid($i);
     }
 }
 
-.alpha {
-	margin-left: 0;
+@for $i from 1 to $layout-number-of-columns+1 {
+    .push_#{$i} {
+        left: (($i / $layout-number-of-columns) * 100%);
+        @media #{$mobile-landscape-wide-point} {
+    	    left: auto;
+        }
+    }
 }
 
-.omega {
-	margin-right: 0;
+@for $i from 1 to $layout-number-of-columns+1 {
+    .pull_#{$i} {
+        right: (($i / $layout-number-of-columns) * 100%);
+        @media #{$mobile-landscape-wide-point} {
+    	    right: auto;
+        }
+    }
+}
+
+@for $i from 1 to $layout-number-of-columns+1 {
+    .grid_#{$i}.alpha {
+        @include ab-grid_alpha($i);
+    }
+}
+
+@for $i from 1 to $layout-number-of-columns+1 {
+    .grid_#{$i}.omega {
+        @include ab-grid_omega($i);
+    }
+}
+@for $i from 1 to $layout-number-of-columns+1 {
+    .grid_#{$i}.alpha-omega {
+        @include ab-grid_alpha_omega($i);
+    }
+}
+.grid_third {
+    @include ab-grid('third');
+}
+.grid_twothird {
+    @include ab-grid('twothird');
 }
 
 .clear {

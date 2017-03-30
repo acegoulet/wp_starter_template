@@ -37,16 +37,14 @@ Enqueue Scripts.
 --------------------------------------------- */
 
 function theme_scripts_enqueue() {
-    global $site_env;
-    if($site_env == 'staging'){
-        wp_enqueue_script('jquery');
-        wp_enqueue_script('validate', gtdu(). '/js/vendor/jquery.validate.min.js', 'jquery', '1', true);
-        wp_enqueue_script('theme-scripts', gtdu(). '/js/site-scripts/site-scripts.js', array('jquery','validate'), '1', true);
+    wp_enqueue_script('jquery');
+    //wp_enqueue_script('slick', gtdu(). '/js/vendor/slick.js', 'jquery', '1.6.0', true);
+    
+    if(get_site_env() == 'staging' || get_site_env() == 'dev'){
+        wp_enqueue_script('theme-scripts', gtdu(). '/js/site-scripts/site-scripts.js', array('jquery'), '1.0.0', true);
     }
     else {
-        wp_enqueue_script('jquery');
-        wp_enqueue_script('validate', gtdu(). '/js/vendor/jquery.validate.min.js', 'jquery', '1', true);
-        wp_enqueue_script('theme-scripts-min', gtdu(). '/js/script-min.js', array('jquery','validate'), '1', true);
+        wp_enqueue_script('theme-scripts-min', gtdu(). '/js/script-min.js', array('jquery','waypoints'), '1.0.0', true);
     }
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts_enqueue' );
