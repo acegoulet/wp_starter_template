@@ -1,0 +1,1 @@
+$=jQuery.noConflict(),$(document).ready(function(){var i,n;n=$("#wrapper"),i=n.width(),$(window).resize(function(){n.width()!=i&&(i=n.width(),n.width())})});
