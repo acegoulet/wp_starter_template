@@ -1,10 +1,10 @@
 <?php
 
-if ( ! function_exists( 'smf_reg_post_types' ) ) {
+if ( ! function_exists( 'aceify_reg_post_types' ) ) {
 
-    add_action('init', 'smf_reg_post_types');
+    add_action('init', 'aceify_reg_post_types');
     
-    function smf_reg_post_types(){
+    function aceify_reg_post_types(){
         $labels = array(
     		'name' => _x('Portfolio Items', 'post type general name'),
     		'singular_name' => _x('Portfolio Item', 'post type singular name'),

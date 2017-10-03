@@ -1,9 +1,9 @@
 <?php
-if ( ! function_exists( 'smf_reg_custom_tax' ) ) {
+if ( ! function_exists( 'aceify_reg_custom_tax' ) ) {
 
-    //add_action('init', 'smf_reg_custom_tax');
+    add_action('init', 'aceify_reg_custom_tax');
     
-    function smf_reg_custom_tax() {
+    function aceify_reg_custom_tax() {
         register_taxonomy(
             'press_type',
             array('post'),
