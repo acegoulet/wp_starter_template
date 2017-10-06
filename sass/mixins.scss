@@ -35,3 +35,22 @@
 	zoom: 1;
 	*display: inline;
 }
+@mixin rt($min-font, $max-font, $min-width: 320, $max-width: 1400) {
+	font-size: #{$min-font}px;
+
+	@media screen and (min-width: #{$min-width}px) and (max-width: #{$max-width}px) {
+		font-size: calc(#{$min-font}px + (#{$max-font} - #{$min-font}) * ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width})));
+	}
+
+	@media screen and (min-width: #{$max-width}px) {
+		font-size: #{$max-font}px;
+	}
+}
+
+//functions
+@function em($pixels, $context: $font-size-base) {
+	@return #{$pixels/$context}em;
+}
+@function rem($pixels, $context: $font-size-base) {
+	@return #{$pixels/$context}rem;
+}
