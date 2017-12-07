@@ -44,7 +44,7 @@ function theme_scripts_enqueue() {
         wp_enqueue_script('theme-scripts', gtdu(). '/js/site-scripts/site-scripts.js', array('jquery'), '1.0.0', true);
     }
     else {
-        wp_enqueue_script('theme-scripts-min', gtdu(). '/js/script-min.js', array('jquery','waypoints'), '1.0.0', true);
+        wp_enqueue_script('theme-scripts-min', gtdu(). '/js/script-min.js', array('jquery'), '1.0.0', true);
     }
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts_enqueue' );
